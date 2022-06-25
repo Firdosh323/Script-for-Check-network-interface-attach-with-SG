@@ -1,0 +1,1 @@
+aws ec2 describe-network-interfaces --output text --query NetworkInterfaces[*].Groups[*].GroupId | tr -d '\r' | tr "\t" "\n" | sort | uniq
